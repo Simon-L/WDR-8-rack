@@ -1,33 +1,35 @@
-# Dummy Plugin!
+# WDR-8
 
-Based on the helper.py script from Rack SDK and the Fundamental panels for Cardinal.
+### Wave Digital Rhythm drum machine, based on TR-808
 
-```bash
-git clone https://github.com/Simon-L/dummy-plugin yourdummyplugin
-cd yourdummyplugin
-export RACK_SDK=/path/to/sdk
-make
-ln -s $(pwd) ~/.Rack2/plugins/yourdummyplugin
-```
+## WDR-8 Snare
 
-Rename:
-```bash
-NAME=NewModuleName
-sed -i "s/DummyModule/${NAME}/g" src/DummyModule.cpp src/plugin.* plugin.json
-mv src/DummyModule.cpp src/${NAME}.cpp
-# New panel file?
-sed -i "s/dummy-panel/panel-file/g" src/${NAME}.cpp
-mv res/dummy-panel.svg res/panel-file.svg
-```
+![](https://nextcould.roselove.pink/apps/files_sharing/publicpreview/NzHELScjLKEFeQH?x=1920&y=613&a=true&scalingup=0)
 
-Change slug, name and brand manually. Don't forget to update the license ;)
+Original schematics:  
+https://nextcould.roselove.pink/apps/files_sharing/publicpreview/rkeyCqN837TBJF2?x=1920&y=613&a=true&file=fullsnareschematics.png&scalingup=0
 
-Later on, reuse the old file from initial commit to start a new module:  
-`git show 520e96ec1f53f751b05a6ff98e91b205c5ed13d6:src/DummyModule.cpp > src/DummyModule.cpp`  
-and use the sed commands above for the cpp file. Oh no, plugin.cpp and plugin.hpp have to be adapted manually, oh no!! it's not automated!
+W.N = White noise  
+Trigger comes from top left  
 
-![](https://nextcould.roselove.pink/s/wsG9LS5f33YqcBd/preview)
+This module uses WDF models for :  
+- A simplified envelope generator (Q47) with adjustable R and C compononents
+- The low shell resonator (IC 14, left) with the shaper at the input
+- The high shell resonator (IC 14, right)
+- A very simplified diode clipper used as the base for the VCA (Q48)
 
+The high pass filter (Q49, C66, C67, R201, R202) is not simulated, instead a matching 2-pole Butterworth HPF from ChowDSP is used.  
+IC 13 has not been analysed and is considered ideal, the Volume knob has this purpose.
+
+The shell resonators are the work of Jatin Chowdhury, as part of the WaveDigitalFilters repo: https://github.com/jatinchowdhury18/WaveDigitalFilters/tree/master/TR_808/SnareResonator/src  
+
+## Acknowledgments
+Many thanks to Jatin Chowdhury, Paulbacon, Steve Norgate, Eric Archer, Kurt J. Werner  
+
+https://norgatronics.blogspot.com/2021/11/sd-8081-tuning.html  
+http://www.ericarcher.net/wp-content/uploads/2014/07/808-svc-man.pdf  
+https://stacks.stanford.edu/file/druid:jy057cz8322/KurtJamesWernerDissertation-augmented.pdf  
+https://github.com/jatinchowdhury18/WaveDigitalFilters  
+ 
 ## License
-
-Panel is copyright © 2022 Jason Corder and Filipe Coelho
+GPL v3

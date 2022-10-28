@@ -1,10 +1,10 @@
 {
-  "slug": "dummy-plugin",
-  "name": "Dummy Plugin",
+  "slug": "WDR8",
+  "name": "WDR-8",
   "version": "2.0.0",
-  "license": "CC0-1.0",
-  "brand": "DummyModules",
-  "author": "Public Domain",
+  "license": "GPL-3.0",
+  "brand": "WDR",
+  "author": "FergusL",
   "authorEmail": "",
   "authorUrl": "",
   "pluginUrl": "",
@@ -14,9 +14,9 @@
   "changelogUrl": "",
   "modules": [
     {
-      "slug": "DummyModule",
-      "name": "DummyModule",
-      "description": "",
+      "slug": "WDR8sd",
+      "name": "WDR8sd",
+      "description": "emulation of TR-808 snare drum using WDF",
       "tags": []
     }
   ]

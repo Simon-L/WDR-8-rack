@@ -2,9 +2,21 @@
 RACK_DIR ?= ../..
 
 # FLAGS will be passed to both the C and C++ compiler
-FLAGS +=
+FLAGS += -std=c++17 -Idep/chowdsp_utils/modules/dsp -Idep/chowdsp_utils/modules/common -Idep/chowdsp_wdf/include
 CFLAGS +=
 CXXFLAGS +=
+
+chowdsp := dep/libchowdsp/libchowdsp.a
+OBJECTS += $(chowdsp)
+DEPS += $(chowdsp)
+$(chowdsp):
+	git clone https://github.com/Chowdhury-DSP/chowdsp_utils dep/chowdsp_utils
+	mkdir dep/libchowdsp
+	touch dep/libchowdsp/CMakeLists.txt
+	echo "add_subdirectory(../chowdsp_utils .)" >> dep/libchowdsp/CMakeLists.txt
+	echo "setup_chowdsp_lib(chowdsp MODULES chowdsp_filters)" >> dep/libchowdsp/CMakeLists.txt
+	cd dep/libchowdsp && cmake . && make -j16
+	git clone https://github.com/Chowdhury-DSP/chowdsp_wdf dep/chowdsp_wdf
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.
 # Static libraries are fine, but they should be added to this plugin's build system.
