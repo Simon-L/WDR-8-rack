@@ -21,6 +21,7 @@ $(chowdsp):
 	touch dep/libchowdsp/CMakeLists.txt
 	echo "add_subdirectory(../chowdsp_utils .)" >> dep/libchowdsp/CMakeLists.txt
 	echo "setup_chowdsp_lib(chowdsp MODULES chowdsp_filters)" >> dep/libchowdsp/CMakeLists.txt
+	echo "target_compile_features(chowdsp PRIVATE cxx_std_17)" >> dep/libchowdsp/CMakeLists.txt
 	cd dep/libchowdsp && $(CMAKE) . && make -j16
 	git clone https://github.com/Chowdhury-DSP/chowdsp_wdf dep/chowdsp_wdf
 
