@@ -6,6 +6,13 @@ FLAGS += -std=c++17 -Idep/chowdsp_utils/modules/dsp -Idep/chowdsp_utils/modules/
 CFLAGS +=
 CXXFLAGS +=
 
+ifdef ARCH_MAC
+# Obvioulsy get rid of this one day
+	FLAGS += -Wno-c++11-extensions
+endif
+
+CXXFLAGS := $(filter-out -std=c++11,$(CXXFLAGS))
+
 chowdsp := dep/libchowdsp/libchowdsp.a
 OBJECTS += $(chowdsp)
 DEPS += $(chowdsp)
