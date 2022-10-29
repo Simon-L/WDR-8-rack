@@ -1,6 +1,6 @@
 #pragma once
 #include <rack.hpp>
-
+#include "chowdsp_filters/chowdsp_filters.h"
 
 using namespace rack;
 
