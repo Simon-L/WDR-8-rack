@@ -1,6 +1,10 @@
 #include "plugin.hpp"
 
+#include <rack.hpp>
 #include "chowdsp_filters/chowdsp_filters.h"
+
+using namespace rack;
+
 #include "WDF_structs.hpp"
 
 // very short current peak with exponential decay, constants selected manually by fitting curves with LTspice
