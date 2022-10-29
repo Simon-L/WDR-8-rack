@@ -8,7 +8,16 @@ CXXFLAGS +=
 
 ifdef ARCH_MAC
 # Obvioulsy get rid of this one day
-	FLAGS += -Wno-c++11-extensions
+	FLAGS += 	-Wno-undefined-bool-conversion \
+	-Wno-c++11-extensions \
+	-Wno-unused-variable \
+	-Wno-reorder \
+	-Wno-char-subscripts \
+	-Wno-sign-compare \
+	-Wno-ignored-qualifiers \
+	-Wno-c++17-extensions \
+	-Wno-unused-private-field
+	FLAGS += -DMAC
 endif
 
 CXXFLAGS := $(filter-out -std=c++11,$(CXXFLAGS))
