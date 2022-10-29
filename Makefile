@@ -11,7 +11,6 @@ ifdef ARCH_MAC
 	FLAGS += -Wno-c++11-extensions
 endif
 
-CXXFLAGS := $(filter-out -std=c++11,$(CXXFLAGS))
 
 chowdsp := dep/libchowdsp/libchowdsp.a
 OBJECTS += $(chowdsp)
@@ -22,7 +21,7 @@ $(chowdsp):
 	touch dep/libchowdsp/CMakeLists.txt
 	echo "add_subdirectory(../chowdsp_utils .)" >> dep/libchowdsp/CMakeLists.txt
 	echo "setup_chowdsp_lib(chowdsp MODULES chowdsp_filters)" >> dep/libchowdsp/CMakeLists.txt
-	cd dep/libchowdsp && $(CMAKE) . -DCMAKE_CXX_FLAGS=$(CXXFLAGS) -DCMAKE_FLAGS=$(FLAGS) && make -j16
+	cd dep/libchowdsp && $(CMAKE) . && make -j16
 	git clone https://github.com/Chowdhury-DSP/chowdsp_wdf dep/chowdsp_wdf
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.
@@ -40,3 +39,5 @@ DISTRIBUTABLES += $(wildcard presets)
 
 # Include the Rack plugin Makefile framework
 include $(RACK_DIR)/plugin.mk
+
+CXXFLAGS := $(filter-out -std=c++11,$(CXXFLAGS))
