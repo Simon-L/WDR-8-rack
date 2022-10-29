@@ -8,16 +8,7 @@ CXXFLAGS +=
 
 ifdef ARCH_MAC
 # Obvioulsy get rid of this one day
-	FLAGS += 	-Wno-undefined-bool-conversion \
-	-Wno-c++11-extensions \
-	-Wno-unused-variable \
-	-Wno-reorder \
-	-Wno-char-subscripts \
-	-Wno-sign-compare \
-	-Wno-ignored-qualifiers \
-	-Wno-c++17-extensions \
-	-Wno-unused-private-field
-	FLAGS += -DMAC
+	FLAGS += -Wno-c++11-extensions
 endif
 
 CXXFLAGS := $(filter-out -std=c++11,$(CXXFLAGS))
@@ -31,7 +22,7 @@ $(chowdsp):
 	touch dep/libchowdsp/CMakeLists.txt
 	echo "add_subdirectory(../chowdsp_utils .)" >> dep/libchowdsp/CMakeLists.txt
 	echo "setup_chowdsp_lib(chowdsp MODULES chowdsp_filters)" >> dep/libchowdsp/CMakeLists.txt
-	cd dep/libchowdsp && $(CMAKE) . && make -j16
+	cd dep/libchowdsp && $(CMAKE) . -DCMAKE_CXX_FLAGS=$(CXXFLAGS) -DCMAKE_FLAGS=$(FLAGS) && make -j16
 	git clone https://github.com/Chowdhury-DSP/chowdsp_wdf dep/chowdsp_wdf
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.

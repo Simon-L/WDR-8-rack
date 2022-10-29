@@ -37,38 +37,38 @@ jobs:
         # only modify plugin version if no tag was created
         if: "! startsWith(github.ref, 'refs/tags/v')"
 
-  build:
-    name: ${{ matrix.platform }}
-    needs: modify-plugin-version
-    runs-on: ubuntu-latest
-    if: github.repository_owner == 'Simon-L'
-    container:
-      image: ghcr.io/qno/rack-plugin-toolchain-win-linux:v2
-      options: --user root
-    strategy:
-      fail-fast: false
-      matrix:
-        platform: [ win, linux ]
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - uses: actions/cache@v2
-        id: plugin-version-cache
-        with:
-          path: plugin.json
-          key: ${{ github.sha }}-${{ github.run_id }}
-      - name: Build plugin
-        run: |
-          export PLUGIN_DIR=$GITHUB_WORKSPACE
-          pushd ${{ env.rack-plugin-toolchain-dir }}
-          sed -i "s/-G 'MSYS Makefiles'/-DCMAKE_SYSTEM_NAME=Windows/g" Rack-SDK-win/dep.mk
-          make plugin-build-${{ matrix.platform }}
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          path: ${{ env.rack-plugin-toolchain-dir }}/plugin-build
-          name: ${{ matrix.platform }}
+  # build:
+  #   name: ${{ matrix.platform }}
+  #   needs: modify-plugin-version
+  #   runs-on: ubuntu-latest
+  #   if: github.repository_owner == 'Simon-L'
+  #   container:
+  #     image: ghcr.io/qno/rack-plugin-toolchain-win-linux:v2
+  #     options: --user root
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       platform: [ win, linux ]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       with:
+  #         submodules: recursive
+  #     - uses: actions/cache@v2
+  #       id: plugin-version-cache
+  #       with:
+  #         path: plugin.json
+  #         key: ${{ github.sha }}-${{ github.run_id }}
+  #     - name: Build plugin
+  #       run: |
+  #         export PLUGIN_DIR=$GITHUB_WORKSPACE
+  #         pushd ${{ env.rack-plugin-toolchain-dir }}
+  #         sed -i "s/-G 'MSYS Makefiles'/-DCMAKE_SYSTEM_NAME=Windows/g" Rack-SDK-win/dep.mk
+  #         make plugin-build-${{ matrix.platform }}
+  #     - name: Upload artifact
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         path: ${{ env.rack-plugin-toolchain-dir }}/plugin-build
+  #         name: ${{ matrix.platform }}
 
   build-mac:
     name: mac
