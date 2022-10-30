@@ -30,6 +30,10 @@ struct WDR8sd : Module {
 		NOISERESO_PARAM,
 		TONE_PARAM,
 		SNAPPY_PARAM,
+		TONECV_PARAM,
+		SNAPPYCV_PARAM,
+		ENVRESCV_PARAM,
+		TUNINGCV_PARAM,
 		ACCENT_PARAM,
 		VOLUME_PARAM,
 		PARAMS_LEN
@@ -37,6 +41,10 @@ struct WDR8sd : Module {
 	enum InputId {
 		TRIGGER_INPUT,
 		ACCENT_INPUT,
+		TONE_INPUT,
+		SNAPPY_INPUT,
+		ENVRES_INPUT,
+		TUNING_INPUT,
 		INPUTS_LEN
 	};
 	enum OutputId {
@@ -71,6 +79,10 @@ struct WDR8sd : Module {
 		configParam(NOISERESO_PARAM, 0.01f, 3.0f, 1.0f, "Noise high-pass resonance");
 		configParam(TONE_PARAM, 0.0f, 1.0f, 0.5f, "Tone");
 		configParam(SNAPPY_PARAM, 0.1f, 2.0f, 0.75f, "Snappy");
+		configParam(TONECV_PARAM, 0.0f, 1.0f, 0.0f, "Tone modulation");
+		configParam(SNAPPYCV_PARAM, 0.0f, 1.0f, 0.0f, "Snappy modulation");
+		configParam(ENVRESCV_PARAM, 0.0f, 1.0f, 0.0f, "Env. decay modulation");
+		configParam(TUNINGCV_PARAM, 0.0f, 1.0f, 0.0f, "Main tuning modulation");
 		configParam(ACCENT_PARAM, 0.0f, 1.0f, 0.5f, "Accent amount");
 		configParam(VOLUME_PARAM, 0.0f, 2.0f, 1.0f, "Output volume");
 
@@ -78,6 +90,10 @@ struct WDR8sd : Module {
 
 		configInput(TRIGGER_INPUT, "Trigger");
 		configInput(ACCENT_INPUT, "Accent");
+		configInput(TONE_INPUT, "Tone CV");
+		configInput(SNAPPY_INPUT, "Snappy CV");
+		configInput(ENVRES_INPUT, "Envelope resistor/decay CV");
+		configInput(TUNING_INPUT, "Main tuning CV");
 
 		configOutput(RESOLOW_OUTPUT, "Low resonator");
 		configOutput(RESOHIGH_OUTPUT, "High resonator");
@@ -145,14 +161,30 @@ struct WDR8sd : Module {
 				lastNoiseRes_Param = params[NOISERESO_PARAM].getValue();
 				fi.calcCoefs(lastNoiseFreq_Param, lastNoiseRes_Param, args.sampleRate);
 			}
-			resoHigh.setRackParameters((params[RESOHIGH_FREQ_PARAM].getValue() + params[RESO_TUNE_PARAM].getValue()) * 0.5);
-			resoLow.setRackParameters((params[RESOLOW_FREQ_PARAM].getValue() + params[RESO_TUNE_PARAM].getValue()) * 0.5);
-			if (params[ENVCAP_PARAM].getValue() != lastEnvCap_Param ||
-				params[ENVRES_PARAM].getValue() != lastEnvRes_Param) {
+			if (!inputs[TUNING_INPUT].isConnected()) {
+				resoHigh.setRackParameters((params[RESOHIGH_FREQ_PARAM].getValue() + params[RESO_TUNE_PARAM].getValue()) * 0.5);
+				resoLow.setRackParameters((params[RESOLOW_FREQ_PARAM].getValue() + params[RESO_TUNE_PARAM].getValue()) * 0.5);
+			}
+			if (((params[ENVCAP_PARAM].getValue() != lastEnvCap_Param ||
+				params[ENVRES_PARAM].getValue() != lastEnvRes_Param)) &&
+				(!inputs[ENVRES_INPUT].isConnected())) {
 				lastEnvRes_Param = params[ENVRES_PARAM].getValue();
 				lastEnvCap_Param = params[ENVCAP_PARAM].getValue();
 				env.setRackParameters(params[ENVCAP_PARAM].getValue(), params[ENVRES_PARAM].getValue());
 			}
+		}
+		if (inputs[ENVRES_INPUT].isConnected()) {
+			lastEnvRes_Param = params[ENVRES_PARAM].getValue();
+			lastEnvCap_Param = params[ENVCAP_PARAM].getValue();
+			float envres_param = math::clamp(params[ENVRES_PARAM].getValue() + (params[ENVRESCV_PARAM].getValue() * 
+								 (inputs[ENVRES_INPUT].getVoltage() / 10.f)) * -1.f, -1.f, 1.f);
+			env.setRackParameters(params[ENVCAP_PARAM].getValue(), envres_param);
+		}
+		if (inputs[TUNING_INPUT].isConnected()) {
+			float reso_tune_param = math::clamp(params[RESO_TUNE_PARAM].getValue() + (params[TUNINGCV_PARAM].getValue() *
+									(inputs[TUNING_INPUT].getVoltage() / 10.f)), -1.f, 1.f);
+			resoHigh.setRackParameters((params[RESOHIGH_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
+			resoLow.setRackParameters((params[RESOLOW_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
 		}
 
 		float overSampled = 0.0;
@@ -171,11 +203,17 @@ struct WDR8sd : Module {
 		resoLow_out *= params[RESOLOW_VOL_PARAM].getValue();
 		resoHigh_out *= params[RESOHIGH_VOL_PARAM].getValue();
 
-		float resonators = resoHigh_out * 0.5 * params[TONE_PARAM].getValue() + resoLow_out * 0.25 * (1 - params[TONE_PARAM].getValue());
+		float tone_param = math::clamp(params[TONE_PARAM].getValue() + 
+						   (params[TONECV_PARAM].getValue() * (inputs[TONE_INPUT].getVoltage() / 10.f)), 0.0, 1.0);
+		float resonators = resoHigh_out * 0.5 * tone_param + resoLow_out * 0.25 * (1 - tone_param);
 
 		float env_out = 0.00926 * (env.processSample(I1(I1time))) * (4.f + accent_boost) * params[ENVATTEN_PARAM].getValue();
 		float vca_out = 2 * (overSampled + 0.425) + 0.66;
-		float out = params[VOLUME_PARAM].getValue() * 4.0 * (fi.processSample(vca_out * env_out) * params[SNAPPY_PARAM].getValue() + resonators);
+
+		float snappy_param = math::clamp(params[SNAPPY_PARAM].getValue() + math::rescale(
+						     params[SNAPPYCV_PARAM].getValue() * (inputs[SNAPPY_INPUT].getVoltage() / 10.f), 0.f, 1.f, 0.1f, 2.f),
+						     0.1f, 2.f);
+		float out = params[VOLUME_PARAM].getValue() * 4.0 * (fi.processSample(vca_out * env_out) * snappy_param + resonators);
 		outputs[RESOLOW_OUTPUT].setVoltage(resoLow_out);
 		outputs[RESOHIGH_OUTPUT].setVoltage(resoHigh_out);
 		outputs[ENV_OUTPUT].setVoltage(env_out);
@@ -231,7 +269,7 @@ struct WDR8sdWidget : ModuleWidget {
 
 		// guides X and Y values, see design SVG file
 		float xGuides[] = {9.68, 22.74, 37.71};
-		float yGuides[] = {25.74, 38.74, 45.75, 61.34, 73.6, 71.02, 85.41};
+		float yGuides[] = {25.74, 38.74, 45.75, 61.34, 72.2, 71.02, 85.41, 93.67, 101.27};
 		addParam(createParamCentered<WDR8OrangeKnob>(mm2px(Vec(xGuides[0], yGuides[0])), module, WDR8sd::RESOLOW_FREQ_PARAM));
 		addParam(createParamCentered<WDR8OrangeKnob>(mm2px(Vec(xGuides[1], yGuides[0])), module, WDR8sd::RESOHIGH_FREQ_PARAM));
 		addParam(createParamCentered<WDR8OrangeKnob>(mm2px(Vec(xGuides[2], yGuides[0])), module, WDR8sd::ENVCAP_PARAM));
@@ -252,10 +290,19 @@ struct WDR8sdWidget : ModuleWidget {
 		addParam(createParamCentered<WDR8YellowKnob>(mm2px(Vec(xGuides[0], yGuides[6])), module, WDR8sd::ACCENT_PARAM));
 		addParam(createParamCentered<WDR8YellowKnob>(mm2px(Vec(xGuides[1], yGuides[6])), module, WDR8sd::VOLUME_PARAM));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[0], 113.115)), module, WDR8sd::TRIGGER_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[1], 113.115)), module, WDR8sd::ACCENT_INPUT));
+		addParam(createParamCentered<WDR8TinyTrimpot>(mm2px(Vec(xGuides[0], yGuides[7])), module, WDR8sd::TONECV_PARAM));
+		addParam(createParamCentered<WDR8TinyTrimpot>(mm2px(Vec(xGuides[1], yGuides[7])), module, WDR8sd::SNAPPYCV_PARAM));
+		addParam(createParamCentered<WDR8TinyTrimpot>(mm2px(Vec(xGuides[2], yGuides[7])), module, WDR8sd::ENVRESCV_PARAM));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], 113.115)), module, WDR8sd::FULL_OUTPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[0], 113.81)), module, WDR8sd::TRIGGER_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[1], 113.81)), module, WDR8sd::ACCENT_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[0], yGuides[8])), module, WDR8sd::TONE_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[1], yGuides[8])), module, WDR8sd::SNAPPY_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], yGuides[8])), module, WDR8sd::ENVRES_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], yGuides[6]-2)), module, WDR8sd::TUNING_INPUT));
+		addParam(createParamCentered<WDR8TinyTrimpot>(mm2px(Vec(42.5, 78.5)), module, WDR8sd::TUNINGCV_PARAM));
+
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], 113.81)), module, WDR8sd::FULL_OUTPUT));
 	}
 };
 

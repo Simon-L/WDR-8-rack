@@ -39,9 +39,9 @@
      inkscape:window-height="1011"
      id="namedview216"
      showgrid="false"
-     inkscape:zoom="8.0000004"
-     inkscape:cx="125.56249"
-     inkscape:cy="114.06249"
+     inkscape:zoom="5.6568545"
+     inkscape:cx="108.27572"
+     inkscape:cy="310.8618"
      inkscape:window-x="2560"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
@@ -72,18 +72,20 @@
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="36.588264,407.16893"
-       orientation="-73.777936,0.29553499"
+       orientation="-1,0"
        id="guide17"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="142.52048,420.75592"
-       orientation="-0.99999198,0.0040056945"
+       position="142.52599,420.75592"
+       orientation="-1,0"
        id="guide56"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="0,58.148034"
+       position="0,55.502365"
        orientation="0,1"
        id="guide57"
        inkscape:label=""
@@ -110,9 +112,11 @@
        inkscape:locked="false" />
     <sodipodi:guide
        position="61.005367,390.75592"
-       orientation="39.452748,-0.0015999999"
+       orientation="-1,0"
        id="guide96"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
        position="134.32045,253.81548"
        orientation="-0.0019999999,-39.452743"
@@ -128,6 +132,27 @@
        orientation="0,-83.030261"
        id="guide137"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="58.040985,102.92189"
+       orientation="0,1"
+       id="guide49"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="57.185232,131.64157"
+       orientation="0,1"
+       id="guide50"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="125.13882,190.96634"
+       orientation="0,1"
+       id="guide138"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <defs
      id="defs7">
@@ -566,6 +591,36 @@
        width="154.32668"
        height="57.297913"
        id="rect42" />
+    <rect
+       x="199.13757"
+       y="0"
+       width="218.84632"
+       height="57.345702"
+       id="rect47" />
+    <rect
+       x="199.13757"
+       y="0"
+       width="218.84632"
+       height="57.345702"
+       id="rect48" />
+    <rect
+       x="199.13757"
+       y="0"
+       width="218.84632"
+       height="57.345702"
+       id="rect49" />
+    <rect
+       x="199.13757"
+       y="0"
+       width="247.01234"
+       height="46.674341"
+       id="rect137" />
+    <rect
+       x="199.13757"
+       y="0"
+       width="261.99535"
+       height="53.000711"
+       id="rect138" />
   </defs>
   <g
      id="b3947816-d40f-41db-852f-d14f402c3ab2"
@@ -719,9 +774,9 @@
        transform="matrix(0.52844454,0,0,0.52844454,19.390278,0.75174626)"><tspan
          x="141.07227"
          y="68.547202"
-         id="tspan3"><tspan
+         id="tspan49"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan2">WDR-8</tspan></tspan></text>
+           id="tspan1">WDR-8</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text3"
@@ -729,9 +784,9 @@
        transform="matrix(0.3608714,0,0,0.3608714,-43.216825,12.318851)"><tspan
          x="141.07227"
          y="68.547202"
-         id="tspan5"><tspan
+         id="tspan51"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan4">Snare</tspan></tspan></text>
+           id="tspan50">Snare</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text3-7"
@@ -739,9 +794,9 @@
        transform="matrix(0.23425906,0,0,0.23425906,-0.13972303,33.664579)"><tspan
          x="141.07227"
          y="68.547202"
-         id="tspan7"><tspan
+         id="tspan53"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan6">Analog Modelled</tspan></tspan></text>
+           id="tspan52">Analog Modelled</tspan></tspan></text>
   </g>
   <rect
      style="fill:#e02a12;fill-opacity:1;stroke:none;stroke-width:3.23281;stroke-miterlimit:4.1"
@@ -822,26 +877,26 @@
      ry="2.151875" />
   <g
      id="g58"
-     transform="matrix(1.3340068,0,0,1.3340068,-55.258007,-142.795)">
+     transform="matrix(1.3340068,0,0,1.3340068,-54.544786,-144.27235)">
     <rect
        style="fill:#fdf189;fill-opacity:1;stroke:#9e9e9e;stroke-width:0.0968228;stroke-miterlimit:4.1"
        id="rect57"
        width="27.803299"
        height="33.775005"
-       x="133.25612"
-       y="413.72446"
+       x="133.82681"
+       y="417.17017"
        rx="0"
        ry="2.2130384" />
     <text
        xml:space="preserve"
        id="text58"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect58);display:inline;fill:#1d1d1c;fill-opacity:1;stroke:none"
-       transform="matrix(0.17246374,0,0,0.17246374,101.05534,439.0652)"><tspan
+       transform="matrix(0.17246374,0,0,0.17246374,101.05534,442.15588)"><tspan
          x="199.13672"
          y="36.570639"
-         id="tspan9"><tspan
+         id="tspan55"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan8">Output</tspan></tspan></text>
+           id="tspan54">Output</tspan></tspan></text>
   </g>
   <g
      id="g34"
@@ -1064,9 +1119,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,19.864139,63.184255)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan11"><tspan
+       id="tspan57"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan10">FREQUENCY </tspan></tspan></text>
+         id="tspan56">FREQUENCY </tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="M 61.005367,75.696381 V 114.13041"
@@ -1285,9 +1340,9 @@
      transform="matrix(0.17933333,0,0,0.17933333,21.290821,112.33087)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan13"><tspan
+       id="tspan59"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan12">VOLUME</tspan></tspan></text>
+         id="tspan58">VOLUME</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="m 61.005367,129.44749 -0.0016,39.45275"
@@ -1305,9 +1360,9 @@
      transform="matrix(0.22851537,0,0,0.22851537,-9.1389258,54.098514)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan15"><tspan
+       id="tspan61"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan14">Resonators</tspan></tspan></text>
+         id="tspan60">Resonators</tspan></tspan></text>
   <g
      id="g66"
      transform="translate(105.80203,12.279486)">
@@ -1418,9 +1473,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,100.8304,63.184255)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan17"><tspan
+       id="tspan63"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan16">ENV. ATTACK</tspan></tspan></text>
+         id="tspan62">ENV. ATTACK</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text69"
@@ -1428,9 +1483,9 @@
      transform="matrix(0.22851537,0,0,0.22851537,84.638302,54.098514)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan19"><tspan
+       id="tspan65"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan18">Noise</tspan></tspan></text>
+         id="tspan64">Noise</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="M 163.11739,64.913395 H 121.92357"
@@ -1546,9 +1601,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,102.23011,113.37185)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan21"><tspan
+       id="tspan67"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan20">ENV. DECAY</tspan></tspan></text>
+         id="tspan66">ENV. DECAY</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="m 36.154556,184.89639 -0.03651,4.20261 8.384344,8.76905"
@@ -1666,15 +1721,15 @@
      y="0"><tspan
        x="185.00999"
        y="56.062087"
-       id="tspan23"><tspan
+       id="tspan69"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:center;text-anchor:middle"
-         id="tspan22">MAIN
+         id="tspan68">MAIN
 </tspan></tspan><tspan
        x="166.73493"
        y="88.035629"
-       id="tspan25"><tspan
+       id="tspan71"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:center;text-anchor:middle"
-         id="tspan24">TUNING</tspan></tspan></text>
+         id="tspan70">TUNING</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="m 86.003054,184.89639 0.03651,4.20261 -8.384344,8.76905"
@@ -1687,9 +1742,9 @@
      transform="matrix(0.13956408,0,0,0.13956858,98.48635,166.27188)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan27"><tspan
+       id="tspan73"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans'"
-         id="tspan26">ENV. ATTENUATOR</tspan></tspan></text>
+         id="tspan72">ENV. ATTENUATOR</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="m 116.09033,67.275665 0,229.147865"
@@ -1805,7 +1860,7 @@
      transform="matrix(0.15978594,0,0,0.15978594,102.46139,197.97591)"><tspan
        x="141.07227"
        y="67.367188"
-       id="tspan28">HPF FREQ.</tspan></text>
+       id="tspan74">HPF FREQ.</tspan></text>
   <text
      xml:space="preserve"
      id="text110"
@@ -1813,9 +1868,9 @@
      transform="matrix(0.13956408,0,0,0.13956858,99.69838,250.27188)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan30"><tspan
+       id="tspan76"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans'"
-         id="tspan29">HPF RESONANCE</tspan></tspan></text>
+         id="tspan75">HPF RESONANCE</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
      d="M 102.52048,236.9134 H 19.490233"
@@ -1931,9 +1986,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,5.2739805,233.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan32"><tspan
+       id="tspan78"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan31">TONE</tspan></tspan></text>
+         id="tspan77">TONE</tspan></tspan></text>
   <g
      id="g113"
      transform="translate(48.960904,183.46038)">
@@ -2044,9 +2099,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,50.674702,233.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan34"><tspan
+       id="tspan80"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan33">SNAPPY</tspan></tspan></text>
+         id="tspan79">SNAPPY</tspan></tspan></text>
   <g
      id="g124"
      transform="translate(-0.38972351,237.46038)">
@@ -2157,9 +2212,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,0.70090773,287.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan36"><tspan
+       id="tspan82"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan35">ACCENT</tspan></tspan></text>
+         id="tspan81">ACCENT</tspan></tspan></text>
   <g
      id="g135"
      transform="translate(48.960904,237.46038)">
@@ -2270,9 +2325,9 @@
      transform="matrix(0.15978594,0,0,0.15978594,49.955666,287.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan38"><tspan
+       id="tspan84"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan37">VOLUME</tspan></tspan></text>
+         id="tspan83">VOLUME</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text15"
@@ -2280,9 +2335,9 @@
      transform="matrix(0.17246374,0,0,0.17246374,44.416761,173.38395)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan40"><tspan
+       id="tspan86"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan39">High</tspan></tspan></text>
+         id="tspan85">High</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text19"
@@ -2290,29 +2345,97 @@
      transform="matrix(0.17246374,0,0,0.17246374,-4.0129267,174.03241)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan42"><tspan
+       id="tspan88"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan41">Low</tspan></tspan></text>
+         id="tspan87">Low</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text42"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect42);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.2300678,0,0,0.2300678,-28.482357,442.93016)"
+     transform="matrix(0.2300678,0,0,0.2300678,-26.99806,445.57581)"
      x="66.05983"
      y="0"><tspan
        x="209.56097"
        y="36.570639"
-       id="tspan44"><tspan
+       id="tspan90"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
-         id="tspan43">Trigger</tspan></tspan></text>
+         id="tspan89">Trigger</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text46"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect46);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.2300678,0,0,0.2300678,24.43796,443.79521)"><tspan
+     transform="matrix(0.2300678,0,0,0.2300678,24.43796,446.44086)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan46"><tspan
+       id="tspan92"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan45">Accent</tspan></tspan></text>
+         id="tspan91">Accent</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text47"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect47);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
+     transform="matrix(0.22115744,0,0,0.22115744,-31.709706,399.22567)"
+     x="132.11966"
+     y="0"><tspan
+       x="229.30075"
+       y="36.570639"
+       id="tspan94"><tspan
+         style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
+         id="tspan93">Tone CV</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text48"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect49);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
+     transform="matrix(0.22115744,0,0,0.22115744,17.640942,399.22567)"
+     x="132.11966"
+     y="0"><tspan
+       x="202.00072"
+       y="36.570639"
+       id="tspan96"><tspan
+         style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
+         id="tspan95">Snappy CV</tspan></tspan></text>
+  <path
+     style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 36.588264,354.02774 0,28.71969"
+     id="path136"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 85.938911,354.02774 0,28.71969"
+     id="path137"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     id="text137"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect137);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
+     transform="matrix(0.22115744,0,0,0.22115744,70.843647,399.22567)"
+     x="132.11966"
+     y="0"><tspan
+       x="203.32383"
+       y="36.570639"
+       id="tspan98"><tspan
+         style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
+         id="tspan97">Env. Dec. CV</tspan></tspan></text>
+  <path
+     style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 142.52599,354.02774 v 28.71969"
+     id="path138"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     id="text138"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect138);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
+     transform="matrix(0.22115744,0,0,0.22115744,69.328451,332.65402)"
+     x="132.11966"
+     y="0"><tspan
+       x="206.3951"
+       y="36.570639"
+       id="tspan100"><tspan
+         style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
+         id="tspan99">Main Tun. CV</tspan></tspan></text>
+  <path
+     style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 160.62993,296.69293 -18.10394,18.55748"
+     id="path139"
+     sodipodi:nodetypes="cc" />
 </svg>

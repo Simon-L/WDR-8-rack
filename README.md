@@ -23,6 +23,10 @@ IC 13 has not been analysed and is considered ideal, the Volume knob has this pu
 
 The shell resonators are the work of Jatin Chowdhury, as part of the WaveDigitalFilters repo: https://github.com/jatinchowdhury18/WaveDigitalFilters/tree/master/TR_808/SnareResonator/src  
 
+## Design
+
+Fonts: [Olyford Semi Bold](https://www.fonts.com/font/nicolassfonts/olyford/semi-bold) and [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
+
 ## Acknowledgments
 Many thanks to Jatin Chowdhury, Paulbacon, Steve Norgate, Eric Archer, Kurt J. Werner  
 
