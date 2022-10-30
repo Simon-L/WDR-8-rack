@@ -268,8 +268,8 @@ struct WDR8sdWidget : ModuleWidget {
 		addChild(createWidget<ScrewBlack>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
 		// guides X and Y values, see design SVG file
-		float xGuides[] = {9.68, 22.74, 37.71};
-		float yGuides[] = {25.74, 38.74, 45.75, 61.34, 72.2, 71.02, 85.41, 93.67, 101.27};
+		float xGuides[] = {8.68, 21.73, 36.95};
+		float yGuides[] = {25.74, 38.74, 45.75, 61.34, 72.4, 71.02, 85.41, 93.67, 101.27};
 		addParam(createParamCentered<WDR8OrangeKnob>(mm2px(Vec(xGuides[0], yGuides[0])), module, WDR8sd::RESOLOW_FREQ_PARAM));
 		addParam(createParamCentered<WDR8OrangeKnob>(mm2px(Vec(xGuides[1], yGuides[0])), module, WDR8sd::RESOHIGH_FREQ_PARAM));
 		addParam(createParamCentered<WDR8OrangeKnob>(mm2px(Vec(xGuides[2], yGuides[0])), module, WDR8sd::ENVCAP_PARAM));
@@ -281,7 +281,7 @@ struct WDR8sdWidget : ModuleWidget {
 		addParam(createParamCentered<WDR8WhiteKnob>(mm2px(Vec(xGuides[2], yGuides[3])), module, WDR8sd::NOISEFREQ_PARAM));
 		addParam(createParamCentered<WDR8Trimpot>(mm2px(Vec(xGuides[2], yGuides[4])), module, WDR8sd::NOISERESO_PARAM));
 
-		addParam(createParamCentered<WDR8YellowKnob>(mm2px(Vec(16.14, 56.57)), module, WDR8sd::RESO_TUNE_PARAM));
+		addParam(createParamCentered<WDR8YellowKnob>(mm2px(Vec(15.22, 56.57)), module, WDR8sd::RESO_TUNE_PARAM));
 
 		addParam(createParamCentered<WDR8Trimpot>(mm2px(Vec(xGuides[2], 50.25)), module, WDR8sd::ENVATTEN_PARAM));
 
@@ -300,7 +300,7 @@ struct WDR8sdWidget : ModuleWidget {
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[1], yGuides[8])), module, WDR8sd::SNAPPY_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], yGuides[8])), module, WDR8sd::ENVRES_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], yGuides[6]-2)), module, WDR8sd::TUNING_INPUT));
-		addParam(createParamCentered<WDR8TinyTrimpot>(mm2px(Vec(42.5, 78.5)), module, WDR8sd::TUNINGCV_PARAM));
+		addParam(createParamCentered<WDR8TinyTrimpot>(mm2px(Vec(42, 78)), module, WDR8sd::TUNINGCV_PARAM));
 
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(xGuides[2], 113.81)), module, WDR8sd::FULL_OUTPUT));
 	}

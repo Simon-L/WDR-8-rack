@@ -39,9 +39,9 @@
      inkscape:window-height="1011"
      id="namedview216"
      showgrid="false"
-     inkscape:zoom="5.6568545"
-     inkscape:cx="108.27572"
-     inkscape:cy="310.8618"
+     inkscape:zoom="4.0000002"
+     inkscape:cx="87.499995"
+     inkscape:cy="214.37499"
      inkscape:window-x="2560"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
@@ -71,14 +71,14 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="36.588264,407.16893"
+       position="32.792547,404.9992"
        orientation="-1,0"
        id="guide17"
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="142.52599,420.75592"
+       position="138.98462,404.99773"
        orientation="-1,0"
        id="guide56"
        inkscape:label=""
@@ -92,7 +92,7 @@
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="85.938911,407.16893"
+       position="82.143192,404.9992"
        orientation="-1,0"
        id="guide18"
        inkscape:label=""
@@ -111,7 +111,7 @@
        id="guide54"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="61.005367,390.75592"
+       position="57.221498,390.75592"
        orientation="-1,0"
        id="guide96"
        inkscape:locked="false"
@@ -625,11 +625,11 @@
   <g
      id="b3947816-d40f-41db-852f-d14f402c3ab2"
      data-name="FND BG"
-     style="fill:#1d1d1c;fill-opacity:1"
+     style="fill:#1d1d1b;fill-opacity:1"
      transform="matrix(1.6457144,0,0,1.2780771,0.02661059,0.00525368)">
     <path
        id="rect9-9"
-       style="fill:#1d1d1c;fill-opacity:1"
+       style="fill:#1d1d1b;fill-opacity:1"
        d="M 0,0 H 105 V 380 H 0 Z" />
   </g>
   <g
@@ -774,7 +774,7 @@
        transform="matrix(0.52844454,0,0,0.52844454,19.390278,0.75174626)"><tspan
          x="141.07227"
          y="68.547202"
-         id="tspan49"><tspan
+         id="tspan56"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
            id="tspan1">WDR-8</tspan></tspan></text>
     <text
@@ -784,19 +784,19 @@
        transform="matrix(0.3608714,0,0,0.3608714,-43.216825,12.318851)"><tspan
          x="141.07227"
          y="68.547202"
-         id="tspan51"><tspan
+         id="tspan58"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan50">Snare</tspan></tspan></text>
+           id="tspan57">Snare</tspan></tspan></text>
     <text
        xml:space="preserve"
        id="text3-7"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3-3);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-       transform="matrix(0.23425906,0,0,0.23425906,-0.13972303,33.664579)"><tspan
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3-3);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+       transform="matrix(0.23425906,0,0,0.23425906,15.669702,33.664579)"><tspan
          x="141.07227"
          y="68.547202"
-         id="tspan53"><tspan
+         id="tspan60"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan52">Analog Modelled</tspan></tspan></text>
+           id="tspan59">Analog Modelled</tspan></tspan></text>
   </g>
   <rect
      style="fill:#e02a12;fill-opacity:1;stroke:none;stroke-width:3.23281;stroke-miterlimit:4.1"
@@ -834,7 +834,7 @@
      x="277.48026"
      y="299.2547" />
   <rect
-     style="fill:#86918e;fill-opacity:1;stroke:none;stroke-width:3.23281;stroke-miterlimit:4.1"
+     style="fill:#c4cac8;fill-opacity:1;stroke:none;stroke-width:3.23281;stroke-miterlimit:4.1"
      id="rect9"
      width="86.653564"
      height="40.821106"
@@ -847,43 +847,23 @@
      height="40.821106"
      x="369.48026"
      y="343.2547" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:1.47509px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M -13.168886,17.526523 V -91.307697"
-     id="path10" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:1.47509px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 185.9689,17.526523 -0.0255,-108.83422"
-     id="path11" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.999956px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 36.594374,-0.00161816 36.889909,-73.779557"
-     id="path12" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 86.415622,0 0.238797,-73.783178"
-     id="path13" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.999956px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 136.18014,0 V -68.015318"
-     id="path14" />
   <rect
      style="fill:#fdf189;fill-opacity:1;stroke:#9e9e9e;stroke-width:0.0968228;stroke-miterlimit:4.1"
      id="rect15"
      width="27.803305"
      height="9.9563055"
-     x="23.182959"
+     x="19.399092"
      y="172.98827"
      ry="2.151875" />
   <g
      id="g58"
-     transform="matrix(1.3340068,0,0,1.3340068,-54.544786,-144.27235)">
+     transform="matrix(1.3340068,0,0,1.3340068,-58.086153,-144.27235)">
     <rect
        style="fill:#fdf189;fill-opacity:1;stroke:#9e9e9e;stroke-width:0.0968228;stroke-miterlimit:4.1"
        id="rect57"
        width="27.803299"
        height="33.775005"
-       x="133.82681"
+       x="134.39346"
        y="417.17017"
        rx="0"
        ry="2.2130384" />
@@ -891,16 +871,16 @@
        xml:space="preserve"
        id="text58"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect58);display:inline;fill:#1d1d1c;fill-opacity:1;stroke:none"
-       transform="matrix(0.17246374,0,0,0.17246374,101.05534,442.15588)"><tspan
+       transform="matrix(0.17246374,0,0,0.17246374,102.19269,442.15588)"><tspan
          x="199.13672"
          y="36.570639"
-         id="tspan55"><tspan
+         id="tspan62"><tspan
            style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-           id="tspan54">Output</tspan></tspan></text>
+           id="tspan61">Output</tspan></tspan></text>
   </g>
   <g
      id="g34"
-     transform="translate(-0.39002958,12.278016)">
+     transform="translate(-4.173897,12.278016)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="use24"
@@ -1006,12 +986,12 @@
      id="rect18"
      width="27.803305"
      height="9.9563055"
-     x="72.5336"
+     x="68.749733"
      y="172.98827"
      ry="2.151875" />
   <g
      id="g29"
-     transform="translate(48.960617,12.278016)">
+     transform="translate(45.176748,12.278016)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path19"
@@ -1115,21 +1095,21 @@
   <text
      xml:space="preserve"
      id="text29"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect30);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,19.864139,63.184255)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect30);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,16.08027,63.184255)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan57"><tspan
+       id="tspan64"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan56">FREQUENCY </tspan></tspan></text>
+         id="tspan63">FREQUENCY </tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 61.005367,75.696381 V 114.13041"
+     d="M 57.221498,75.696381 V 114.13041"
      id="path30"
      sodipodi:nodetypes="cc" />
   <g
      id="g41"
-     transform="translate(-0.39002958,61.460379)">
+     transform="translate(-4.173897,61.460379)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path31"
@@ -1232,7 +1212,7 @@
   </g>
   <g
      id="g52"
-     transform="translate(48.960617,61.460379)">
+     transform="translate(45.176748,61.460379)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path42"
@@ -1336,36 +1316,36 @@
   <text
      xml:space="preserve"
      id="text52"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect53);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.17933333,0,0,0.17933333,21.290821,112.33087)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect53);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.17933333,0,0,0.17933333,17.506952,112.33087)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan59"><tspan
+       id="tspan66"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan58">VOLUME</tspan></tspan></text>
+         id="tspan65">VOLUME</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 61.005367,129.44749 -0.0016,39.45275"
+     d="m 57.221498,129.44749 -0.0016,39.45275"
      id="path53"
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 102.52048,64.913395 H 19.490233"
+     d="M 98.736629,64.913395 H 15.706364"
      id="path1"
      sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
      id="text18"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.22851537,0,0,0.22851537,-9.1389258,54.098514)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect19);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.22851537,0,0,0.22851537,-12.922794,54.098514)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan61"><tspan
+       id="tspan68"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan60">Resonators</tspan></tspan></text>
+         id="tspan67">Resonators</tspan></tspan></text>
   <g
      id="g66"
-     transform="translate(105.80203,12.279486)">
+     transform="translate(102.77248,12.279486)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path56"
@@ -1469,31 +1449,31 @@
   <text
      xml:space="preserve"
      id="text67"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect67);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,100.8304,63.184255)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect67);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,97.046537,63.184255)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan63"><tspan
+       id="tspan70"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan62">ENV. ATTACK</tspan></tspan></text>
+         id="tspan69">ENV. ATTACK</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text69"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect69);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.22851537,0,0,0.22851537,84.638302,54.098514)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect69);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.22851537,0,0,0.22851537,80.854433,54.098514)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan65"><tspan
+       id="tspan72"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan64">Noise</tspan></tspan></text>
+         id="tspan71">Noise</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 163.11739,64.913395 H 121.92357"
+     d="M 159.33354,64.913395 H 118.13972"
      id="path69"
      sodipodi:nodetypes="cc" />
   <g
      id="g80"
-     transform="translate(105.42408,61.460379)">
+     transform="translate(102.77408,61.460379)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path70"
@@ -1597,21 +1577,21 @@
   <text
      xml:space="preserve"
      id="text81"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect81);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,102.23011,113.37185)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect81);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,98.446256,113.37185)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan67"><tspan
+       id="tspan74"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal'"
-         id="tspan66">ENV. DECAY</tspan></tspan></text>
+         id="tspan73">ENV. DECAY</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 36.154556,184.89639 -0.03651,4.20261 8.384344,8.76905"
+     d="m 32.370687,184.89639 -0.03651,4.20261 8.384344,8.76905"
      id="path81"
      sodipodi:nodetypes="ccc" />
   <g
      id="g93"
-     transform="translate(23.975165,128.61697)">
+     transform="translate(20.191296,128.61697)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path83"
@@ -1715,44 +1695,44 @@
   <text
      xml:space="preserve"
      id="text95"
-     style="font-style:normal;font-weight:normal;font-size:29.7398px;line-height:1.05;font-family:sans-serif;white-space:pre;shape-inside:url(#rect95);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.21509109,0,0,0.21509109,12.70347,172.61087)"
+     style="font-style:normal;font-weight:normal;font-size:29.7398px;line-height:1.05;font-family:sans-serif;white-space:pre;shape-inside:url(#rect95);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.21509109,0,0,0.21509109,8.9196011,172.61087)"
      x="75.799881"
      y="0"><tspan
        x="185.00999"
        y="56.062087"
-       id="tspan69"><tspan
+       id="tspan76"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:center;text-anchor:middle"
-         id="tspan68">MAIN
+         id="tspan75">MAIN
 </tspan></tspan><tspan
        x="166.73493"
        y="88.035629"
-       id="tspan71"><tspan
+       id="tspan78"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';text-align:center;text-anchor:middle"
-         id="tspan70">TUNING</tspan></tspan></text>
+         id="tspan77">TUNING</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 86.003054,184.89639 0.03651,4.20261 -8.384344,8.76905"
+     d="m 82.219185,184.89639 0.03651,4.20261 -8.384344,8.76905"
      id="path95"
      sodipodi:nodetypes="ccc" />
   <text
      xml:space="preserve"
      id="text96"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect96);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.13956408,0,0,0.13956858,98.48635,166.27188)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect96);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15786366,0,0,0.15786874,95.074522,165.23905)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan73"><tspan
+       id="tspan80"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans'"
-         id="tspan72">ENV. ATTENUATOR</tspan></tspan></text>
+         id="tspan79">ENV. AMOUNT</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="m 116.09033,67.275665 0,229.147865"
+     d="M 112.30648,67.275665 V 296.42353"
      id="path96"
      sodipodi:nodetypes="cc" />
   <g
      id="g107"
-     transform="matrix(1.0000047,0,0,1,105.04606,146.96863)">
+     transform="matrix(1.0000047,0,0,1,102.77402,146.96863)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path97"
@@ -1856,29 +1836,32 @@
   <text
      xml:space="preserve"
      id="text109"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect109);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,102.46139,197.97591)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect109);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,104.44015,197.97591)"><tspan
        x="141.07227"
-       y="67.367188"
-       id="tspan74">HPF FREQ.</tspan></text>
+       y="68.37157"
+       id="tspan82"><tspan
+         style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans'"
+         id="tspan81">CUTOFF
+</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text110"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect110);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.13956408,0,0,0.13956858,99.69838,250.27188)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect110);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15540856,0,0,0.15541358,98.747456,249.02734)"><tspan
        x="141.07227"
        y="68.37157"
-       id="tspan76"><tspan
+       id="tspan84"><tspan
          style="font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans'"
-         id="tspan75">HPF RESONANCE</tspan></tspan></text>
+         id="tspan83">RESONANCE</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:0.604724;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 102.52048,236.9134 H 19.490233"
+     d="M 98.736629,236.9134 H 15.706364"
      id="path110"
      sodipodi:nodetypes="cc" />
   <g
      id="g17"
-     transform="translate(-0.38972351,183.46038)">
+     transform="translate(-4.173591,183.46038)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path2"
@@ -1982,16 +1965,16 @@
   <text
      xml:space="preserve"
      id="text37"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect37);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,5.2739805,233.37185)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect37);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15975204,0,0,0.15974247,1.4939178,233.3728)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan78"><tspan
+       id="tspan86"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan77">TONE</tspan></tspan></text>
+         id="tspan85">TONE</tspan></tspan></text>
   <g
      id="g113"
-     transform="translate(48.960904,183.46038)">
+     transform="translate(45.177035,183.46038)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path54"
@@ -2095,16 +2078,16 @@
   <text
      xml:space="preserve"
      id="text114"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect114);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,50.674702,233.37185)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect114);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,46.890833,233.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan80"><tspan
+       id="tspan88"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan79">SNAPPY</tspan></tspan></text>
+         id="tspan87">SNAPPY</tspan></tspan></text>
   <g
      id="g124"
-     transform="translate(-0.38972351,237.46038)">
+     transform="translate(-4.173591,237.46038)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path114"
@@ -2208,16 +2191,16 @@
   <text
      xml:space="preserve"
      id="text124"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect135);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,0.70090773,287.37185)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect135);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,-3.0829596,287.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan82"><tspan
+       id="tspan90"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan81">ACCENT</tspan></tspan></text>
+         id="tspan89">ACCENT</tspan></tspan></text>
   <g
      id="g135"
-     transform="translate(48.960904,237.46038)">
+     transform="translate(45.177035,237.46038)">
     <path
        d="m 25.944368,103.24803 2.19026,-3.746238"
        id="path125"
@@ -2321,121 +2304,121 @@
   <text
      xml:space="preserve"
      id="text135"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect136);display:inline;fill:#86918e;fill-opacity:1;stroke:none"
-     transform="matrix(0.15978594,0,0,0.15978594,49.955666,287.37185)"><tspan
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect136);display:inline;fill:#c4cac8;fill-opacity:1;stroke:none"
+     transform="matrix(0.15978594,0,0,0.15978594,46.171797,287.37185)"><tspan
        x="141.07227"
        y="68.547202"
-       id="tspan84"><tspan
+       id="tspan92"><tspan
          style="font-family:Olyford;-inkscape-font-specification:Olyford"
-         id="tspan83">VOLUME</tspan></tspan></text>
+         id="tspan91">VOLUME</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text15"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect16);display:inline;fill:#1d1d1c;fill-opacity:1;stroke:none"
-     transform="matrix(0.17246374,0,0,0.17246374,44.416761,173.38395)"><tspan
+     transform="matrix(0.17246374,0,0,0.17246374,40.632892,173.38395)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan86"><tspan
+       id="tspan94"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan85">High</tspan></tspan></text>
+         id="tspan93">High</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text19"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect29);display:inline;fill:#1d1d1c;fill-opacity:1;stroke:none"
-     transform="matrix(0.17246374,0,0,0.17246374,-4.0129267,174.03241)"><tspan
+     transform="matrix(0.17246374,0,0,0.17246374,-7.7967942,174.03241)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan88"><tspan
+       id="tspan96"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan87">Low</tspan></tspan></text>
+         id="tspan95">Low</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text42"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect42);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.2300678,0,0,0.2300678,-26.99806,445.57581)"
+     transform="matrix(0.2300678,0,0,0.2300678,-30.781929,445.57581)"
      x="66.05983"
      y="0"><tspan
        x="209.56097"
        y="36.570639"
-       id="tspan90"><tspan
+       id="tspan98"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
-         id="tspan89">Trigger</tspan></tspan></text>
+         id="tspan97">Trigger</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text46"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect46);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.2300678,0,0,0.2300678,24.43796,446.44086)"><tspan
+     transform="matrix(0.2300678,0,0,0.2300678,20.654091,446.44086)"><tspan
        x="199.13672"
        y="36.570639"
-       id="tspan92"><tspan
+       id="tspan100"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal'"
-         id="tspan91">Accent</tspan></tspan></text>
+         id="tspan99">Accent</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text47"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect47);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.22115744,0,0,0.22115744,-31.709706,399.22567)"
+     transform="matrix(0.22115744,0,0,0.22115744,-35.493575,399.22567)"
      x="132.11966"
      y="0"><tspan
        x="229.30075"
        y="36.570639"
-       id="tspan94"><tspan
+       id="tspan102"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
-         id="tspan93">Tone CV</tspan></tspan></text>
+         id="tspan101">Tone CV</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text48"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect49);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.22115744,0,0,0.22115744,17.640942,399.22567)"
+     transform="matrix(0.22115744,0,0,0.22115744,13.857073,399.22567)"
      x="132.11966"
      y="0"><tspan
        x="202.00072"
        y="36.570639"
-       id="tspan96"><tspan
+       id="tspan104"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
-         id="tspan95">Snappy CV</tspan></tspan></text>
+         id="tspan103">Snappy CV</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 36.588264,354.02774 0,28.71969"
+     d="m 32.804395,354.02774 v 28.71969"
      id="path136"
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 85.938911,354.02774 0,28.71969"
+     d="m 82.155042,354.02774 v 28.71969"
      id="path137"
      sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
      id="text137"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect137);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.22115744,0,0,0.22115744,70.843647,399.22567)"
+     transform="matrix(0.22115744,0,0,0.22115744,67.302277,399.22567)"
      x="132.11966"
      y="0"><tspan
        x="203.32383"
        y="36.570639"
-       id="tspan98"><tspan
+       id="tspan106"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
-         id="tspan97">Env. Dec. CV</tspan></tspan></text>
+         id="tspan105">Env. Dec. CV</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 142.52599,354.02774 v 28.71969"
+     d="m 139.49804,354.02774 v 28.71969"
      id="path138"
      sodipodi:nodetypes="cc" />
   <text
      xml:space="preserve"
      id="text138"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect138);display:inline;fill:#fdf189;fill-opacity:1;stroke:none"
-     transform="matrix(0.22115744,0,0,0.22115744,69.328451,332.65402)"
+     transform="matrix(0.22115744,0,0,0.22115744,65.787081,332.65402)"
      x="132.11966"
      y="0"><tspan
        x="206.3951"
        y="36.570639"
-       id="tspan100"><tspan
+       id="tspan108"><tspan
          style="font-family:Olyford;-inkscape-font-specification:'Olyford, Normal';text-align:center;text-anchor:middle"
-         id="tspan99">Main Tun. CV</tspan></tspan></text>
+         id="tspan107">Main Tun. CV</tspan></tspan></text>
   <path
      style="fill:none;stroke:#86918e;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 160.62993,296.69293 -18.10394,18.55748"
+     d="m 156.84608,296.69293 -18.10394,18.55748"
      id="path139"
      sodipodi:nodetypes="cc" />
 </svg>
