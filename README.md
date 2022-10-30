@@ -2,12 +2,17 @@
 
 ### Wave Digital Rhythm drum machine, based on TR-808
 
+__:floppy_disk: Download nightly builds [here](https://github.com/Simon-L/WDR-8/releases/tag/Nightly)__
+
 ## WDR-8 Snare
 
-![](https://nextcould.roselove.pink/apps/files_sharing/publicpreview/NzHELScjLKEFeQH?x=1920&y=613&a=true&scalingup=0)
+This module emulates the TR-808 snare as faithfully as possible while providing precise control over various parts to allow different snare and percussion sounds to be possible.  
+As with the original, it is made of two "resonators", high and low, representing the ringing of the drum shell when hit. The other part is made from noise (more precisely violet noise), shaped by an envelope generator that I believe is very important to get the 808 sound.  
+In the (near?) future, I plan to assemble the actual white noise source circuit and analyse it to make the noise used in the module closer to the original.
 
-Original schematics:  
-https://nextcould.roselove.pink/apps/files_sharing/publicpreview/rkeyCqN837TBJF2?x=1920&y=613&a=true&file=fullsnareschematics.png&scalingup=0
+![](docs/screenshot.png)
+
+[Original schematics](docs/fullsnareschematics.png)
 
 W.N = White noise  
 Trigger comes from top left  
@@ -22,6 +27,9 @@ The high pass filter (Q49, C66, C67, R201, R202) is not simulated, instead a mat
 IC 13 has not been analysed and is considered ideal, the Volume knob has this purpose.
 
 The shell resonators are the work of Jatin Chowdhury, as part of the WaveDigitalFilters repo: https://github.com/jatinchowdhury18/WaveDigitalFilters/tree/master/TR_808/SnareResonator/src  
+
+The programming of this module was the easiest part, most of the time was spent running electronics simulation in a software called LTspice, it has allowed me to simulate and understand the various parts of the complete snare drum circuit and calibrate this real time software version so that it matches the simulation as closely as possible.  
+It goes without saying that the work also paves the way for other 808 instruments, as well as other Roland drum machines!
 
 ## Design
 
