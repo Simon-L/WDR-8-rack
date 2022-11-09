@@ -183,19 +183,19 @@ struct WDR8sd : Module {
 				lastEnvCap_Param = params[ENVCAP_PARAM].getValue();
 				env.setRackParameters(params[ENVCAP_PARAM].getValue(), params[ENVRES_PARAM].getValue());
 			}
-		}
-		if (inputs[ENVRES_INPUT].isConnected()) {
-			lastEnvRes_Param = params[ENVRES_PARAM].getValue();
-			lastEnvCap_Param = params[ENVCAP_PARAM].getValue();
-			float envres_param = math::clamp(params[ENVRES_PARAM].getValue() + (params[ENVRESCV_PARAM].getValue() * 
-								 (inputs[ENVRES_INPUT].getVoltage() / 10.f)) * -1.f, -1.f, 1.f);
-			env.setRackParameters(params[ENVCAP_PARAM].getValue(), envres_param);
-		}
-		if (inputs[TUNING_INPUT].isConnected()) {
-			float reso_tune_param = math::clamp(params[RESO_TUNE_PARAM].getValue() + (params[TUNINGCV_PARAM].getValue() *
-									(inputs[TUNING_INPUT].getVoltage() / 10.f)), -1.f, 1.f);
-			resoHigh.setRackParameters((params[RESOHIGH_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
-			resoLow.setRackParameters((params[RESOLOW_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
+			if (inputs[ENVRES_INPUT].isConnected()) {
+				lastEnvRes_Param = params[ENVRES_PARAM].getValue();
+				lastEnvCap_Param = params[ENVCAP_PARAM].getValue();
+				float envres_param = math::clamp(params[ENVRES_PARAM].getValue() + (params[ENVRESCV_PARAM].getValue() * 
+									 (inputs[ENVRES_INPUT].getVoltage() / 10.f)) * -1.f, -1.f, 1.f);
+				env.setRackParameters(params[ENVCAP_PARAM].getValue(), envres_param);
+			}
+			if (inputs[TUNING_INPUT].isConnected()) {
+				float reso_tune_param = math::clamp(params[RESO_TUNE_PARAM].getValue() + (params[TUNINGCV_PARAM].getValue() *
+										(inputs[TUNING_INPUT].getVoltage() / 10.f)), -1.f, 1.f);
+				resoHigh.setRackParameters((params[RESOHIGH_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
+				resoLow.setRackParameters((params[RESOLOW_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
+			}
 		}
 
 		alignas (16) float values_in_4[4];
