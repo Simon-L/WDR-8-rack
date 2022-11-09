@@ -1,3 +1,4 @@
+#include "xsimd/xsimd.hpp"
 #include "chowdsp_wdf/chowdsp_wdf.h"
 using namespace chowdsp::wdft;
 
@@ -64,6 +65,7 @@ public:
     IdealCurrentSourceT<float, decltype (P1)> I1 { P1 };
 }; // EnvelopeGenerator
 
+template <typename FloatType>
 class DiodeClipper
 {
 public:
@@ -72,43 +74,35 @@ public:
     void prepare (double sampleRate)
     {
         C1.prepare ((float) sampleRate);
-        C2.prepare ((float) sampleRate);
     }
 
     void reset()
     {
         C1.reset();
-        C2.reset();
     }
 
-    void setCircuitParams ()
-    {
-    }
-
-    void setCircuitElements ()
-    {
-    }
-
-    inline float processSample (float x)
+    inline FloatType processSample (FloatType x)
     {
         Vs.setVoltage (x);
 
         dp.incident (P1.reflected());
-        auto y = voltage<float> (C2);
+        auto y = voltage<FloatType> (C1);
         P1.incident (dp.reflected());
 
         return y;
     }
 
-    CapacitorT<float> C1 { 600.0e-9f };
-    ResistiveVoltageSourceT<float> Vs;
-    WDFSeriesT<float, decltype (Vs), decltype (C1)> S1 { Vs, C1 };
+private:
+    ResistorT<FloatType> R1 { 411.5f };
+    ResistiveVoltageSourceT<FloatType> Vs;
+    WDFSeriesT<FloatType, decltype (Vs), decltype (R1)> S1 { Vs, R1 };
 
-    CapacitorT<float> C2 { 1.0e-9f };
-    WDFParallelT<float, decltype (S1), decltype (C2)> P1 { S1, C2 };
+    CapacitorT<FloatType> C1 { 47.0e-9f };
+    WDFParallelT<FloatType, decltype (S1), decltype (C1)> P1 { S1, C1 };
 
-    DiodePairT<float, decltype (P1)> dp { P1, 2.52e-9f };
-}; // DiodeClipper
+    // GZ34 diode pair
+    DiodePairT<FloatType, decltype (P1)> dp { P1, 2.52e-9f };
+};
 
 /**
  * Resonators from TR-808 snare drum circuit.

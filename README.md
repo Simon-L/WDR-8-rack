@@ -35,8 +35,10 @@ It goes without saying that the work also paves the way for other 808 instrument
 
 Fonts: [Olyford Semi Bold](https://www.fonts.com/font/nicolassfonts/olyford/semi-bold) and [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
 
+Coolors.co palette: https://coolors.co/1d1d1b-c4cac8-fdf189-ff5a00-d54400-e02a12
+
 ## Acknowledgments
-Many thanks to Jatin Chowdhury, Paulbacon, Steve Norgate, Eric Archer, Kurt J. Werner  
+Many thanks to Jatin Chowdhury, Paulbacon, EvilDragon, hemmer, Steve Norgate, Eric Archer, Kurt J. Werner  
 
 https://norgatronics.blogspot.com/2021/11/sd-8081-tuning.html  
 http://www.ericarcher.net/wp-content/uploads/2014/07/808-svc-man.pdf  

@@ -2,7 +2,7 @@
 RACK_DIR ?= ../..
 
 # FLAGS will be passed to both the C and C++ compiler
-FLAGS += -std=c++17 -Idep/chowdsp_utils/modules/dsp -Idep/chowdsp_utils/modules/common -Idep/chowdsp_wdf/include
+FLAGS += -ffast-math -DXTENSOR_USE_XSIMD -std=c++17 -Idep/chowdsp_utils/modules/dsp -Idep/chowdsp_utils/modules/common -Idep/chowdsp_wdf/include -Idep/xsimd/include
 CFLAGS +=
 CXXFLAGS +=
 
@@ -24,6 +24,7 @@ $(chowdsp):
 	echo "target_compile_features(chowdsp PRIVATE cxx_std_17)" >> dep/libchowdsp/CMakeLists.txt
 	cd dep/libchowdsp && $(CMAKE) . -DCMAKE_BUILD_TYPE=Release && make -j16
 	git clone https://github.com/Chowdhury-DSP/chowdsp_wdf dep/chowdsp_wdf
+	git clone https://github.com/xtensor-stack/xsimd/ dep/xsimd
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.
 # Static libraries are fine, but they should be added to this plugin's build system.

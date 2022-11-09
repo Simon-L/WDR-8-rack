@@ -13,7 +13,8 @@ struct WDR8sd : Module {
 	chowdsp::ButterworthFilter< 2, chowdsp::ButterworthFilterType::Highpass, float> fi;
 
 	EnvelopeGenerator env;
-	DiodeClipper vca;
+	DiodeClipper<xsimd::batch<float>> vca;
+
 	SnareResonatorLow resoLow;
 	SnareResonatorHigh resoHigh;
 
@@ -104,12 +105,11 @@ struct WDR8sd : Module {
 		parametersDivider.setDivision(16);
 	}
 
-	int overSampling = 4;
 	void prepare(float sr) {
 		env.prepare(sr);
 		env.reset();
 
-		vca.prepare(sr * overSampling);
+		vca.prepare(sr);
 		vca.reset();
 
 		resoLow.prepare(sr);
@@ -128,13 +128,24 @@ struct WDR8sd : Module {
 		prepare(e.sampleRate);
 	}
 
-	const float noiseGain = 5.f / std::sqrt(2.f);
-	float lastWhite = 0.f;
-	float noise() {
-		float white = random::normal();
-		float violet = (white - lastWhite) / 1.41f;
-		lastWhite = white;
-		return violet * noiseGain;
+	// https://www.musicdsp.org/en/latest/Synthesis/216-fast-whitenoise-generator.html
+	float g_fScale = 2.0f / 0xffffffff;
+	int g_x1 = 0x67452301;
+	int g_x2 = 0xefcdab89;
+
+	void whitenoise(
+	  float* _fpDstBuffer, // Pointer to buffer
+	  unsigned int _uiBufferSize, // Size of buffer
+	  float _fLevel ) // Noiselevel (0.0 ... 1.0)
+	{
+	  _fLevel *= g_fScale;
+
+	  while( _uiBufferSize-- )
+	  {
+	    g_x1 ^= g_x2;
+	    *_fpDstBuffer++ = g_x2 * _fLevel;
+	    g_x2 += g_x1;
+	  }
 	}
 
 	float lastNoiseRes_Param;
@@ -187,12 +198,17 @@ struct WDR8sd : Module {
 			resoLow.setRackParameters((params[RESOLOW_FREQ_PARAM].getValue() + reso_tune_param) * 0.5);
 		}
 
-		float overSampled = 0.0;
-        for (int i = 0; i < overSampling; ++i)
-        {
-            overSampled += vca.processSample(noise() * 0.5);
-        }
-        overSampled /= overSampling;
+		alignas (16) float values_in_4[4];
+		alignas (16) float values_out_4[4];
+	    whitenoise(values_in_4, 4, 1.0f); // input
+	    auto out_4 = vca.processSample(xsimd::load_aligned(values_in_4));
+	    out_4.store_aligned(values_out_4);	    
+	    for (int i = 0; i < 3; ++i) {
+	        values_out_4[i+1] += values_out_4[i];
+	    }
+	    values_out_4[3] /= 4.0;
+		float vca_noise_out  = (values_out_4[3] < -10.0f ? -10.0f : (values_out_4[3] > 10.0f ? 10.0f : values_out_4[3]));
+
 
         // All the constants and multipliers below were selected either by fitting curves with simulation or by subjective listening tests
         float accent_boost = (accent ? params[ACCENT_PARAM].getValue() * 10.f : 0.f);
@@ -208,7 +224,7 @@ struct WDR8sd : Module {
 		float resonators = resoHigh_out * 0.5 * tone_param + resoLow_out * 0.25 * (1 - tone_param);
 
 		float env_out = 0.00926 * (env.processSample(I1(I1time))) * (4.f + accent_boost) * params[ENVATTEN_PARAM].getValue();
-		float vca_out = 2 * (overSampled + 0.425) + 0.66;
+		float vca_out = 2 * (vca_noise_out + 0.425) + 0.66;
 
 		float snappy_param = math::clamp(params[SNAPPY_PARAM].getValue() + math::rescale(
 						     params[SNAPPYCV_PARAM].getValue() * (inputs[SNAPPY_INPUT].getVoltage() / 10.f), 0.f, 1.f, 0.1f, 2.f),
@@ -218,7 +234,7 @@ struct WDR8sd : Module {
 		outputs[RESOHIGH_OUTPUT].setVoltage(resoHigh_out);
 		outputs[ENV_OUTPUT].setVoltage(env_out);
 		outputs[CLIP_OUTPUT].setVoltage(vca_out);
-		outputs[FULL_OUTPUT].setVoltage(out);
+		outputs[FULL_OUTPUT].setVoltage((out < -10.0f ? -10.0f : (out > 10.0f ? 10.0f : out)));
 	}
 };
 
